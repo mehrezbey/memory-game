@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="style/main-style.css">
+</head>
+<body>
+    <div class="launch-screen">
+        <div class="user-data">
+            <label for="username">Enter your username : </label>
+            <input type="text" name="username" id="username" placeholder="john doe" maxlength="25" minlength="5" required>
+            <div class="warning-message" style="display: none;">Invalid username! Try again.</div>
+            <input type="button" value="Start">
+        </div>
+    </div>
+    <header>
+        <div class="title">
+            Welcome to The  Memory Game
+        </div>
+
+        <div class="information">
+            <div class="timer">
+                <div class="time">000</div>
+            </div>
+            <br>
+            <div class="number-ties">
+                Tries : <span class="tries">0</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="cards-container">
+        <div class="card-container">
+            <div class="card card-front"></div>
+            <div class="card card-back">
+                <img src="assets/images/breaking-bad.jpg" data-tv-show="breaking-bad">
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card card-front"></div>
+            <div class="card card-back">
+                <img src="assets/images/breaking-bad.jpg" data-tv-show="breaking-bad">
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card card-front"></div>
+            <div class="card card-back">
+                <img src="assets/images/friends.jpg" data-tv-show="friends">
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card card-front"></div>
+            <div class="card card-back">
+                <img src="assets/images/friends.jpg" data-tv-show="friends">
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card card-front"></div>
+            <div class="card card-back">
+                <img src="assets/images/got.jpg" data-tv-show="got">
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card card-front"></div>
+            <div class="card card-back">
+                <img src="assets/images/got.jpg" data-tv-show="got">
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card card-front"></div>
+            <div class="card card-back">
+                <img src="assets/images/lost.jpg" data-tv-show="lost">
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card card-front"></div>
+            <div class="card card-back">
+                <img src="assets/images/lost.jpg" data-tv-show="lost">
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card card-front"></div>
+            <div class="card card-back">
+                <img src="assets/images/prison-break.jpg" data-tv-show="prison-break">
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card card-front"></div>
+            <div class="card card-back">
+                <img src="assets/images/prison-break.jpg" data-tv-show="prison-break">
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card card-front"></div>
+            <div class="card card-back">
+                <img src="assets/images/succession.jpg" data-tv-show="succession">
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card card-front"></div>
+            <div class="card card-back">
+                <img src="assets/images/succession.jpg" data-tv-show="succession">
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card card-front"></div>
+            <div class="card card-back">
+                <img src="assets/images/the-office.jpg" data-tv-show="the-office">
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card card-front"></div>
+            <div class="card card-back">
+                <img src="assets/images/the-office.jpg" data-tv-show="the-office">
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card card-front"></div>
+            <div class="card card-back">
+                <img src="assets/images/the-walking-dead.jpg" data-tv-show="the-walking-dead">
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card card-front"></div>
+            <div class="card card-back">
+                <img src="assets/images/the-walking-dead.jpg" data-tv-show="the-walking-dead">
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card card-front"></div>
+            <div class="card card-back">
+                <img src="assets/images/vickings.jpg" data-tv-show="vickings">
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card card-front"></div>
+            <div class="card card-back">
+                <img src="assets/images/vickings.jpg" data-tv-show="vickings">
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card card-front"></div>
+            <div class="card card-back">
+                <img src="assets/images/young-sheldon.jpg" data-tv-show="young-sheldon">
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card card-front"></div>
+            <div class="card card-back">
+                <img src="assets/images/young-sheldon.jpg" data-tv-show="young-sheldon">
+            </div>
+        </div>
+    </div>
+
+    <audio id="success" src="assets/audio/success.mp3" preload="auto"></audio>
+    <audio id="fail" src="assets/audio/fail.mp3" preload="auto"></audio>
+    <audio id="finished" src="assets/audio/finished.mp3" preload="auto"></audio>
+
+
+    <script src="./script/main.js"></script>
+</body>
+</html>

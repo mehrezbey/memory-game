@@ -1,0 +1,174 @@
+/* --- Start Variables --- */
+:root{
+    --margin-top:20px;
+
+}
+/* --- End Variables --- */
+
+/* --- Start Global Rules --- */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #a6b1dd4c	;
+}
+.rotate-y-180{
+    transform: rotateY(180deg);
+}
+/* --- End Global Rules --- */
+/* --- Start Launch Screen --- */
+.launch-screen{
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: #c3f0e2f4			;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.launch-screen .user-data{
+    width: 100%;
+    height:100% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.launch-screen .user-data label{
+    font-size: 40px;
+    font-weight: bold;
+    color: #000b32;
+    margin: var(--margin-top) 0;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+}
+.launch-screen .user-data input{
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 0;
+    margin: var(--margin-top) 0;
+    /* background-color: #a6b1dd	; */
+}
+.launch-screen .user-data  .warning-message{
+    color: red;
+    font-weight: bold;
+    text-align: start;
+    margin: -10px 0 20px -60px;
+    text-decoration: underline;
+}
+.launch-screen .user-data input:focus{
+    outline: 2px solid #b1dbd3	;
+}
+.launch-screen .user-data input[type="button"]{
+    background-color:#000b32	 ;
+    cursor: pointer;
+    color:#c3f0e2;
+    width: 150px;
+}
+/* --- End Launch Screen --- */
+
+/* --- Start Header --- */
+header{
+    /* width: 80vw; */
+    margin: var(--margin-top) auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: #213469;
+}
+header a{
+    text-decoration: none;
+    color: #213469	;
+}
+header .title{
+    text-decoration: dashed;
+    font-size: 35px;
+    text-shadow: 0px 0px 2px #000b32;
+}
+
+header .information{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    font-size: 20px;
+    flex-direction: column;
+
+}
+/* --- Start cards-container --- */
+.cards-container{
+    width: 1000px;
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cards-container .card-container{
+    height: 150px;
+    cursor: pointer;
+    transition: all 0.5s;
+    transform-style: preserve-3d;
+    position: relative;
+    flex: 1 0 150px;
+    margin: 0px 10px 10px ;
+}
+
+.cards-container .card-container .card-front{
+    background-color: #213469	;
+    line-height: 150px;
+}
+.cards-container .card-container .card-front::before{
+    content: "?";
+    font-size: 100px;
+    color: #c3f0e2	;
+    font-weight: bold;
+
+}
+.cards-container .card-container .card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center; 
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+.cards-container .card-container .card-back{
+    transform: rotateY(180deg);
+}
+.flipped{
+    transform: rotateY(180deg);
+    pointer-events: none;
+}
+.revealed{
+    transform: rotateY(180deg);
+    pointer-events: none;
+}
+.cards-container .card-container .card-back img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+/* --- End cards-container --- */
+
+@media (max-width: 950px) {
+    .cards-container .card-container{
+        height: 125px;
+        flex: 1 0 125px;
+
+    }
+} 
+@media (max-width: 1050px) {
+    .cards-container{
+        width: 90vw;
+    }
+}
