@@ -96,6 +96,10 @@ function flipCard(card){
             document.getElementById("finished").play();
             title.textContent = "Congrats "+userName+"!";
             clearInterval(id);
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         }
     }
 }
