@@ -13,7 +13,7 @@ This is a basic memory game where the player need to match pairs of cards.
 - Win condition detection
 
 ## Demo
-
+https://mehrezbey.github.io/memory-game/
 
 ## How to Play
 
